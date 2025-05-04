@@ -257,3 +257,150 @@ progress {
   font-size: inherit;
   padding: 0.8rem;
 }
+
+/* Existing CSS remains the same until the media queries section */
+
+/* Base responsive adjustments */
+body {
+  padding: 2rem;
+}
+
+.app-header {
+  width: 100%;
+  max-width: 66rem;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 50rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Mobile-first media queries */
+@media (min-width: 480px) {
+  body {
+    padding: 2.4rem;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  .app-header {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 3.2rem;
+  }
+
+  h1 {
+    font-size: 5.6rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 360px) {
+  body {
+    padding: 1.6rem;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .btn {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+  }
+
+  .timer,
+  .btn-ui {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Form elements responsiveness */
+.btn,
+.btn-option,
+.btn-ui {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+  .btn,
+  .btn-ui {
+    width: auto;
+  }
+
+  .btn-ui {
+    float: right;
+  }
+
+  .timer {
+    float: left;
+  }
+}
+
+/* Options list adjustments */
+.options {
+  gap: 1rem;
+}
+
+/* Progress bar adjustments */
+.progress {
+  font-size: 1.6rem;
+}
+
+/* Result text sizing */
+.result {
+  font-size: 1.8rem;
+  padding: 1.5rem 0;
+}
+
+.result span {
+  font-size: 2rem;
+}
+
+/* Image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal scrolling */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
